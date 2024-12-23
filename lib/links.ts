@@ -20,7 +20,8 @@ interface ProjectLink {
 enum OwnLinkKeys {
     Github = 'Github_Link',
     LinkedIn = 'LinkedIn_Link',
-    Behance = 'Behance_Link'
+    Behance = 'Behance_Link',
+    Resume = "Resume_Link"
 }
 
 enum ProjectLinkKeys {
@@ -40,6 +41,10 @@ export const OwnLinks: Record<OwnLinkKeys, ProjectLink> = {
     [OwnLinkKeys.Behance]: {
         name: "Behance Link",
         link: 'https://www.behance.net/emmanueaguado'
+    },
+    [OwnLinkKeys.Resume]: {
+        name: "Resume Link",
+        link: "https://drive.google.com/file/d/1K68dDTDnBCkrC_KQ6NM3I9L7Z4Mdvu9L/view?usp=sharing"
     }
 } as const;
 

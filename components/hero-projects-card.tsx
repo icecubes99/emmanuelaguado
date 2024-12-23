@@ -33,22 +33,22 @@ const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt
                 <div className="flex items-start justify-between mb-4">
                     <CardTitle className="text-xl font-bold">{title}</CardTitle>
                     <div className="flex gap-2">
-                        {githubLink && (<Link href={githubLink || ""}>
+                        {githubLink && (<Link href={githubLink || ""} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
                                 <Github className="h-5 w-5" />
                             </Button>
                         </Link>)}
-                        {liveLink && (<Link href={liveLink || ""}>
+                        {liveLink && (<Link href={liveLink || ""} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
                                 <ExternalLink className="h-5 w-5" />
                             </Button>
                         </Link>)}
-                        {figmaLink && (<Link href={figmaLink || ""}>
+                        {figmaLink && (<Link href={figmaLink || ""} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
                                 <FigmaIcon className="h-5 w-5" />
                             </Button>
                         </Link>)}
-                        {linkedInLink && (<Link href={linkedInLink || ""}>
+                        {linkedInLink && (<Link href={linkedInLink || ""} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
                                 <LinkedinIcon className="h-5 w-5" />
                             </Button>
