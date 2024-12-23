@@ -8,7 +8,9 @@ const NavBar = () => {
         <header className='md:sticky h-24 px-6 md:px-20 flex flex-row items-center justify-between top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
             <div className='flex flex-row gap-5 items-center'>
                 <div className='p-5 text-sm'>
-                    <span className='font-extrabold'>emmanuelaguado</span>.com
+                    <Link href={"/"}>
+                        <span className='font-extrabold'>emmanuelaguado</span>.com
+                    </Link>
                 </div>
                 <div className='hidden md:flex gap-10'>
                     {
