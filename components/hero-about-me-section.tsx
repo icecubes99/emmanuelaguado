@@ -11,7 +11,7 @@ const HeroAboutMeSection = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="relative aspect-square">
                         <Image
-                            src="/Me.jpg?height=600&width=600"
+                            src="/Me.png?height=600&width=600"
                             alt="Profile picture"
                             fill
                             className="object-cover rounded-lg"
