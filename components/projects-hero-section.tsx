@@ -13,6 +13,10 @@ const fadeInUp: Variants = {
 }
 
 const ProjectsHeroSection = () => {
+    const startYear = 2022;
+    const currentYear = new Date().getFullYear();
+    const yearsOfExperience = currentYear - startYear + 1;
+
     return (
         <div className="relative">
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -77,7 +81,7 @@ const ProjectsHeroSection = () => {
                                 <div className="text-sm text-muted-foreground">Projects Completed</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-4xl font-bold text-primary mb-2">5+</div>
+                                <div className="text-4xl font-bold text-primary mb-2">{yearsOfExperience}+</div>
                                 <div className="text-sm text-muted-foreground">Years Experience</div>
                             </div>
                             <div className="text-center">

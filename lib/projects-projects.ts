@@ -60,12 +60,12 @@ export const projectsData: Project[] = [
             }
         ]
     },
-    {
-        title: "PHABS Davao",
-        description: "Mobile app for tracking PHABS Buses in Davao City.",
-        image: "/PHABS.png",
-        badges: ["React", "Node.js", "DALL-E", "Express", "MongoDB", "Cloudinary"]
-    },
+    // {
+    //     title: "PHABS Davao",
+    //     description: "Mobile app for tracking PHABS Buses in Davao City.",
+    //     image: "/PHABS.png",
+    //     badges: ["React", "Node.js", "DALL-E", "Express", "MongoDB", "Cloudinary"]
+    // },
     {
         title: "The Happy Asian Pessimist",
         description: "Personal blog and cooking website mock.",

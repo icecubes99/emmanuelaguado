@@ -25,9 +25,11 @@ const NavBar = () => {
                 </div>
             </div>
             <div className='hidden md:flex lg:flex-row gap-5'>
-                <Button variant={"default"}>
-                    Contact me
-                </Button>
+                <Link href={"/contact"}>
+                    <Button variant={"default"}>
+                        Contact me
+                    </Button>
+                </Link>
                 <Link href={ProjectURLs.OwnResume} target="_blank" rel="noopener noreferrer">
                     <Button variant={"outline"}>
                         View Resume
