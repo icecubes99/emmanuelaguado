@@ -3,16 +3,22 @@ import React from 'react'
 import ProjectsProjectsCard from './projects-projects-card'
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
-import { Clock, DollarSign, ExternalLink, Github, Laptop, Moon, Users } from 'lucide-react'
+import { Clock, Diamond, DollarSign, ExternalLink, Github, Laptop, Moon, SquareAsterisk, Users, Star, Heart, Globe } from 'lucide-react'
 import { Card, CardContent } from './ui/card'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const IconMap = {
     users: Users,
     laptop: Laptop,
     moon: Moon,
     clock: Clock,
-    money: DollarSign
+    money: DollarSign,
+    modern: Diamond,
+    clean: SquareAsterisk,
+    star: Star,
+    heart: Heart,
+    globe: Globe
 };
 
 
@@ -62,6 +68,16 @@ const ProjectsProjectsSection = () => {
                                                     <Button variant="outline" className="gap-2">
                                                         <Github className="h-4 w-4" />
                                                         Source Code
+                                                    </Button>
+                                                </Link>
+                                            )
+                                        }
+                                        {
+                                            project.behanceLink && (
+                                                <Link href={project.behanceLink} target="_blank" rel="noopener noreferrer">
+                                                    <Button variant="outline" className="gap-2">
+                                                        <Image src={"/Behance.svg"} width={20} height={20} alt='Behance' />
+                                                        Behance Post
                                                     </Button>
                                                 </Link>
                                             )

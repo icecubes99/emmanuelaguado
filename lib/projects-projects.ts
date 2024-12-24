@@ -14,7 +14,7 @@ interface Project {
     images?: string[];
     year?: string;
     features?: {
-        icon: 'users' | 'laptop' | 'moon' | 'clock' | "money"; // Icon names
+        icon: 'users' | 'laptop' | 'moon' | 'clock' | "money" | "clean" | "modern" | "star" | "heart" | "globe"; // Icon names
         title: string;
         description: string;
     }[];
@@ -80,8 +80,54 @@ export const projectsData: Project[] = [
         ],
         year: "2024",
         features: [
-
+            {
+                icon: 'modern',
+                title: 'Clean and Modern',
+                description: "The mock provides a clean and modern feel"
+            },
+            {
+                icon: 'star',
+                title: 'Organized',
+                description: "The design is sectioned into organized parts for an easier overview"
+            },
+            {
+                icon: 'heart',
+                title: 'User-Friendly',
+                description: "Intuitive and user-friendly interface"
+            },
         ],
         behanceLink: ProjectURLs.THAPBehance
+    },
+    {
+        title: "KII Landing Page",
+        description: "Ecommerce landing page for KII mock.",
+        image: "/KIIWebsite/1st.png",
+        alt: "KII Landing Page",
+        badges: ["UI/UX Design", "Figma", "Ecommerce", "Landing Page", "Mockup"],
+        images: [
+            "/KIIWebsite/1st.png",
+            "/KIIWebsite/2nd.png",
+            "/KIIWebsite/3rd.png",
+            "/KIIWebsite/4th.png",
+        ],
+        year: "2024",
+        features: [
+            {
+                icon: 'modern',
+                title: 'Clean and Modern',
+                description: "The mock provides a clean and modern feel"
+            },
+            {
+                icon: 'star',
+                title: 'Organized',
+                description: "The design is sectioned into organized parts for an easier overview"
+            },
+            {
+                icon: 'heart',
+                title: 'User-Friendly',
+                description: "Intuitive and user-friendly interface"
+            },
+        ],
+        behanceLink: ProjectURLs.KIIWebsiteBehance
     },
 ];
