@@ -10,9 +10,9 @@ const page = () => {
     return (
         <div>
             <NavBar />
+            <ProjectsHeroSection />
             <UniversalLayout>
 
-                <ProjectsHeroSection />
                 <ProjectsProjectsSection />
             </UniversalLayout>
             <HeroCallToActionSection />

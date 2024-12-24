@@ -6,6 +6,7 @@ const Footer = () => {
     return (
         <footer className="border-t">
             <div className="container mx-auto px-4 py-8">
+
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-muted-foreground">
                         © 2024 Emmanuel Aguado. All rights reserved.
