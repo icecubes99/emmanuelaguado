@@ -12,49 +12,13 @@ export const NavBarLinks = [
         link: '/socials'
     }
 ]
-interface ProjectLink {
-    readonly name: string;
-    readonly link: string;
+
+export enum ProjectURLs {
+    OwnGithub = "https://github.com/icecubes99",
+    OwnLinkedIn = 'https://www.linkedin.com/in/emmanuel-aguado-0a17162ab/',
+    OwnBehance = 'https://www.behance.net/emmanueaguado',
+    OwnResume = "https://drive.google.com/file/d/1K68dDTDnBCkrC_KQ6NM3I9L7Z4Mdvu9L/view?usp=sharing",
+    THAPBehance = 'https://www.behance.net/gallery/215005673/The-Happy-Asian-Pessimist',
+    EMSGithub = "https://github.com/icecubes99/ems-v2",
+    EMSLiveLink = "https://ems-v2.vercel.app/"
 }
-
-enum OwnLinkKeys {
-    Github = 'Github_Link',
-    LinkedIn = 'LinkedIn_Link',
-    Behance = 'Behance_Link',
-    Resume = "Resume_Link"
-}
-
-enum ProjectLinkKeys {
-    EMS = 'EMS_GithubLink',
-    EMSLive = 'EMS_LiveLink'
-}
-
-export const OwnLinks: Record<OwnLinkKeys, ProjectLink> = {
-    [OwnLinkKeys.Github]: {
-        name: "Github Link",
-        link: 'https://github.com/icecubes99'
-    },
-    [OwnLinkKeys.LinkedIn]: {
-        name: "LinkedIn Link",
-        link: 'https://www.linkedin.com/in/emmanuel-aguado-0a17162ab/'
-    },
-    [OwnLinkKeys.Behance]: {
-        name: "Behance Link",
-        link: 'https://www.behance.net/emmanueaguado'
-    },
-    [OwnLinkKeys.Resume]: {
-        name: "Resume Link",
-        link: "https://drive.google.com/file/d/1K68dDTDnBCkrC_KQ6NM3I9L7Z4Mdvu9L/view?usp=sharing"
-    }
-} as const;
-
-export const ProjectLinks: Record<ProjectLinkKeys, ProjectLink> = {
-    [ProjectLinkKeys.EMS]: {
-        name: "EMS-GithubLink",
-        link: "https://github.com/icecubes99/ems-v2"
-    },
-    [ProjectLinkKeys.EMSLive]: {
-        name: "EMS-LiveLink",
-        link: "https://ems-v2.vercel.app/"
-    }
-} as const;

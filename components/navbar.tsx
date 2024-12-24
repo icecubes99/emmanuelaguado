@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from './ui/button'
-import { NavBarLinks, OwnLinks } from '@/lib/links'
+import { NavBarLinks, ProjectURLs } from '@/lib/links'
 import Link from 'next/link'
 import MobileNavbar from './mobile-navbar'
 const NavBar = () => {
@@ -28,7 +28,7 @@ const NavBar = () => {
                 <Button variant={"default"}>
                     Contact me
                 </Button>
-                <Link href={OwnLinks.Resume_Link.link} target="_blank" rel="noopener noreferrer">
+                <Link href={ProjectURLs.OwnResume} target="_blank" rel="noopener noreferrer">
                     <Button variant={"outline"}>
                         View Resume
                     </Button>

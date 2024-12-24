@@ -20,7 +20,7 @@ interface HeroProjectsCardProps {
 
 const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt, figmaLink, linkedInLink, badges = [] }: HeroProjectsCardProps) => {
     return (
-        <Card className="flex flex-col md:flex-row overflow-hidden border-2 hover:dark hover:bg-slate-900 hover:transition-all hover:duration-300 duration-300">
+        <Card className="flex flex-col md:flex-row overflow-hidden border-2">
             <div className="md:w-1/2 relative aspect-video">
                 <Image
                     src={image}

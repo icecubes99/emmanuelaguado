@@ -1,4 +1,4 @@
-import { ProjectLinks } from "./links";
+import { ProjectURLs } from "./links";
 
 interface Project {
     title: string;
@@ -18,8 +18,8 @@ export const projectsData: Project[] = [
         description: "Full-stack employee management system with role-based access control and real-time updates.",
         image: "/EMS.png",
         alt: "Employee Management System",
-        githubLink: ProjectLinks.EMS_GithubLink.link,
-        liveLink: ProjectLinks.EMS_LiveLink.link,
+        githubLink: ProjectURLs.EMSGithub,
+        liveLink: ProjectURLs.EMSLiveLink,
         badges: ["Next.js 14", "TypeScript", "Supabase", "TailwindCSS"]
     },
     {

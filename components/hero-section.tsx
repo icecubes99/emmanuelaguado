@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { ArrowRight, Github, LinkedinIcon } from 'lucide-react'
-import { OwnLinks } from '@/lib/links'
+import { ProjectURLs } from '@/lib/links'
 
 const HeroSection = () => {
     return (
@@ -25,13 +25,13 @@ const HeroSection = () => {
                     </Button>
                     <div className="flex gap-2">
                         <Button variant="outline" size="icon" asChild>
-                            <Link href={OwnLinks.Github_Link.link}>
+                            <Link href={ProjectURLs.OwnGithub}>
                                 <Github className="h-4 w-4" />
                                 <span className="sr-only">GitHub</span>
                             </Link>
                         </Button>
                         <Button variant="outline" size="icon" asChild>
-                            <Link href={OwnLinks.LinkedIn_Link.link}>
+                            <Link href={ProjectURLs.OwnLinkedIn}>
                                 <LinkedinIcon className="h-4 w-4" />
                                 <span className="sr-only">Twitter</span>
                             </Link>

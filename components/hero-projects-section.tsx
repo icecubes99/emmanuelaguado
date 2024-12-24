@@ -3,6 +3,7 @@ import HeroProjectsCard from './hero-projects-card'
 import { projectsData } from '@/lib/projects-hero'
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const HeroProjectsSection = () => {
     return (
@@ -23,10 +24,12 @@ const HeroProjectsSection = () => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <Button variant="outline" className="gap-2">
-                        View All Projects
-                        <ArrowRight className="h-4 w-4" />
-                    </Button>
+                    <Link href={'/projects'}>
+                        <Button variant="outline" className="gap-2">
+                            View All Projects
+                            <ArrowRight className="h-4 w-4" />
+                        </Button>
+                    </Link>
                 </div>
             </section>
         </div>
