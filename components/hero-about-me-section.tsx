@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const HeroAboutMeSection = () => {
     return (
@@ -24,10 +25,12 @@ const HeroAboutMeSection = () => {
                         <p className="text-lg text-muted-foreground">
                             When I&apos;m not coding, you can find me exploring new technologies, watching and logging films in my Letterboxd, or just chilling.
                         </p>
-                        <Button className="gap-2">
-                            More About Me
-                            <ArrowRight className="h-4 w-4" />
-                        </Button>
+                        <Link href="/about">
+                            <Button className="gap-2">
+                                More About Me
+                                <ArrowRight className="h-4 w-4" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
