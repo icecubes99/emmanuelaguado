@@ -25,12 +25,12 @@ const HeroAboutMeSection = () => {
                         <p className="text-lg text-muted-foreground">
                             When I&apos;m not coding, you can find me exploring new technologies, watching and logging films in my Letterboxd, or just chilling.
                         </p>
-                        <Link href="/about">
-                            <Button className="gap-2">
+                        <Button className="gap-2" asChild>
+                            <Link href="/about">
                                 More About Me
                                 <ArrowRight className="h-4 w-4" />
-                            </Button>
-                        </Link>
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </div>
