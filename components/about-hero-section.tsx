@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion, Variants } from "framer-motion"
 import { Badge } from '@/components/ui/badge'
-import { ChartArea, Clock, Mail } from 'lucide-react'
+import { Boxes, Code2, Phone } from 'lucide-react'
 import UniversalLayout from './margin'
 
 const fadeInUp: Variants = {
@@ -11,7 +11,7 @@ const fadeInUp: Variants = {
     animate: { opacity: 1, y: 0 }
 }
 
-const ContactHeroSection = () => {
+const AboutHeroSection = () => {
     return (
         <div className="relative mb-12">
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -30,7 +30,7 @@ const ContactHeroSection = () => {
                             transition={{ delay: 0.3 }}
                         >
                             <h1 className="text-6xl font-bold tracking-tight mb-6">
-                                Let&apos;s Talk
+                                About Me
                             </h1>
                         </motion.div>
 
@@ -41,7 +41,7 @@ const ContactHeroSection = () => {
                             transition={{ delay: 0.5 }}
                         >
                             <p className="text-xl text-muted-foreground mb-8">
-                                Have a project in mind? I&lsquo;d love to help bring your ideas to life.
+                                Full Stack Developer with a passion for creating innovative and user-friendly web applications.
                             </p>
                         </motion.div>
 
@@ -53,16 +53,16 @@ const ContactHeroSection = () => {
                             className="flex flex-wrap justify-center gap-4 "
                         >
                             <Badge className="px-4 py-2 rounded-full text-base">
-                                <Mail className="w-4 h-4 mr-2" />
-                                Quick Response
+                                <Code2 className="w-4 h-4 mr-2" />
+                                Full Stack Development
                             </Badge>
                             <Badge className="px-4 py-2 rounded-full text-base">
-                                <ChartArea className="w-4 h-4 mr-2" />
-                                Clear Communication
+                                <Boxes className="w-4 h-4 mr-2" />
+                                UI/UX Design
                             </Badge>
                             <Badge className="px-4 py-2 rounded-full text-base">
-                                <Clock className="w-4 h-4 mr-2" />
-                                Flexible Schedule
+                                <Phone className="w-4 h-4 mr-2" />
+                                Mobile Development
                             </Badge>
                         </motion.div>
                     </div>
@@ -72,4 +72,4 @@ const ContactHeroSection = () => {
     )
 }
 
-export default ContactHeroSection
+export default AboutHeroSection
