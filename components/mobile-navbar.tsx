@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet"
 import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
-import { NavBarLinks } from '@/lib/links'
+import { NavBarLinks, ProjectURLs } from '@/lib/links'
 import Link from 'next/link'
 const MobileNavbar = () => {
 
@@ -35,12 +35,16 @@ const MobileNavbar = () => {
                     {renderNavLinks}
                 </div>
                 <div className='mt-5 flex flex-col items-center justify-center gap-5'>
-                    <Button variant={"default"}>
-                        Contact me
-                    </Button>
-                    <Button variant={"default"}>
-                        View Resume
-                    </Button>
+                    <Link href={"/contact"}>
+                        <Button variant={"default"}>
+                            Contact me
+                        </Button>
+                    </Link>
+                    <Link href={ProjectURLs.OwnResume} target="_blank" rel="noopener noreferrer">
+                        <Button variant={"default"}>
+                            View Resume
+                        </Button>
+                    </Link>
                 </div>
             </SheetContent>
         </Sheet>
