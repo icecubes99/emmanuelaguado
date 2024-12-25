@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Emmanuel Aguado",
   description: "Emmanuel Aguado's personal website/portfolio.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

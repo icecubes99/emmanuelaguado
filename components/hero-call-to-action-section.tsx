@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from './ui/button'
 import { Mail } from 'lucide-react'
 import UniversalLayout from './margin'
+import Link from 'next/link'
 
 const HeroCallToActionSection = () => {
     return (
@@ -12,10 +13,12 @@ const HeroCallToActionSection = () => {
                     <p className="text-lg text-muted-foreground mb-8">
                         I&apos;m always interested in hearing about new projects and opportunities.
                     </p>
-                    <Button className="gap-2">
-                        <Mail className="h-5 w-5" />
-                        Get in Touch
-                    </Button>
+                    <Link href="/contact">
+                        <Button className="gap-2">
+                            <Mail className="h-5 w-5" />
+                            Get in Touch
+                        </Button>
+                    </Link>
                 </div>
             </UniversalLayout>
         </section>

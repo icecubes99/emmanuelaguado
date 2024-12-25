@@ -19,10 +19,10 @@ const HeroAboutMeSection = () => {
                     </div>
                     <div className="space-y-6">
                         <p className="text-lg text-muted-foreground">
-                            I&apos;m a full-stack developer with a passion for building beautiful, functional, and accessible web applications. With over 5 years of experience in web development, I specialize in creating responsive and user-friendly interfaces.
+                            I&apos;m a full-stack developer with a passion for building beautiful, functional, and accessible web applications. With over 3 years of experience in web development, I specialize in creating responsive and user-friendly interfaces.
                         </p>
                         <p className="text-lg text-muted-foreground">
-                            When I&apos;m not coding, you can find me contributing to open-source projects, writing technical articles, or exploring new technologies.
+                            When I&apos;m not coding, you can find me exploring new technologies, watching and logging films in my Letterboxd, or just chilling.
                         </p>
                         <Button className="gap-2">
                             More About Me

@@ -24,10 +24,10 @@ const AboutBioSection = () => {
                     <div className="space-y-6">
                         <h2 className="text-3xl font-bold">Hi, I&apos;m Emmanuel Aguado</h2>
                         <p className="text-lg text-muted-foreground">
-                            I&apos;m a Full Stack Developer with over 5 years of experience in creating robust and scalable web applications. My passion lies in solving complex problems and turning ideas into reality through code.
+                            I&apos;m a Full Stack Developer with over 3 years of experience in creating robust and scalable web applications. My passion lies in solving complex problems and turning ideas into reality through code.
                         </p>
                         <p className="text-lg text-muted-foreground">
-                            When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical writing and mentoring.
+                            When I&apos;m not coding, you can find me exploring new technologies, watching and logging films in my Letterboxd, or just chilling.
                         </p>
                         <div className="flex gap-4">
                             <Link href={ProjectURLs.OwnGithub} target="_blank" rel="noopener noreferrer">
