@@ -1,5 +1,6 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from './ui/button'
 import { Briefcase, Calendar, Download, Github, LinkedinIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -7,8 +8,10 @@ import { ProjectURLs } from '@/lib/links'
 import { Badge } from './ui/badge'
 import { certifications, experiences, skills } from '@/lib/skills-experiences'
 import { Card, CardContent } from './ui/card'
+import CardTopBorder from './ui/card-with-top-border'
 
 const AboutBioSection = () => {
+    const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
     return (
         <section className="py-20">
             <div className="max-w-4xl mx-auto">
@@ -54,8 +57,18 @@ const AboutBioSection = () => {
                         <h2 className="text-3xl font-bold mb-6">My Skills</h2>
                         <div className="flex flex-wrap gap-2">
                             {skills.map((skill, index) => (
-                                <Badge key={index} variant="secondary" className="text-base py-1 px-3">
-                                    {skill}
+                                <Badge
+                                    key={index}
+                                    variant="secondary"
+                                    className="text-base py-1 px-3 flex items-center gap-2 transition-colors duration-200"
+                                    onMouseEnter={() => setHoveredSkill(skill.name)}
+                                    onMouseLeave={() => setHoveredSkill(null)}
+                                >
+                                    <skill.icon
+                                        className="w-4 h-4 transition-colors duration-200"
+                                        style={{ color: hoveredSkill === skill.name ? skill.color : 'currentColor' }}
+                                    />
+                                    {skill.name}
                                 </Badge>
                             ))}
                         </div>
@@ -88,7 +101,7 @@ const AboutBioSection = () => {
                         <h2 className="text-3xl font-bold mb-6">Certifications</h2>
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                             {certifications.map((cert, index) => (
-                                <Card key={index} className='hover:shadow-lg hover:transition-all hover:duration-200 duration-200'>
+                                <CardTopBorder key={index} className='hover:shadow-lg hover:transition-all hover:duration-200 duration-200 relative overflow-hidden'>
                                     <Link href={cert.link} target="_blank" rel="noopener noreferrer">
                                         <CardContent className="p-6">
                                             <h3 className="text-lg font-semibold mb-2">{cert.name}</h3>
@@ -99,22 +112,22 @@ const AboutBioSection = () => {
                                             </div>
                                         </CardContent>
                                     </Link>
-                                </Card>
+                                </CardTopBorder>
                             ))}
                         </div>
                     </section>
 
                     <section>
                         <h2 className="text-3xl font-bold mb-6">Education</h2>
-                        <Card>
-                            <CardContent className="p-6">
+                        <CardTopBorder>
+                            <CardContent className="p-6 ">
                                 <h3 className="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
                                 <p className="text-muted-foreground">Ateneo de Davao University | 2022 - 2026</p>
                                 <p className="mt-4 text-muted-foreground">
                                     Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems
                                 </p>
                             </CardContent>
-                        </Card>
+                        </CardTopBorder>
                     </section>
 
                     <div className="text-center">

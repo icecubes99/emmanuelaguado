@@ -4,9 +4,10 @@ import ProjectsProjectsCard from './projects-projects-card'
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 import { Clock, Diamond, DollarSign, ExternalLink, Github, Laptop, Moon, SquareAsterisk, Users, Star, Heart, Globe } from 'lucide-react'
-import { Card, CardContent } from './ui/card'
+import { CardContent } from './ui/card'
 import Link from 'next/link'
 import Image from 'next/image'
+import CardTopBorder from './ui/card-with-top-border'
 
 const IconMap = {
     users: Users,
@@ -84,7 +85,7 @@ const ProjectsProjectsSection = () => {
                                         }
                                     </div>
                                 </div>
-                                <Card>
+                                <CardTopBorder>
                                     <CardContent className="pt-6">
                                         <div className="grid gap-4">
                                             {project.features?.map((feature, idx) => {
@@ -103,7 +104,7 @@ const ProjectsProjectsSection = () => {
                                             })}
                                         </div>
                                     </CardContent>
-                                </Card>
+                                </CardTopBorder>
                             </section>
                         </div>
                     ))}

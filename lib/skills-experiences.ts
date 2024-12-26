@@ -1,8 +1,43 @@
-export const skills = [
-    "React", "Next.js", "TypeScript", "Node.js", "Express", "Python",
-    "PostgreSQL", "MongoDB", "REST APIs",
-    "Docker", , "CI/CD", "Git",
-    "Tailwind CSS", "Framer Motion", "Jest"
+import {
+    FaReact,
+    FaNodeJs,
+    FaPython,
+    FaDocker,
+    FaGitAlt
+} from 'react-icons/fa'
+import {
+    SiNextdotjs,
+    SiTypescript,
+    SiExpress,
+    SiPostgresql,
+    SiMongodb,
+    SiTailwindcss,
+    SiFramer,
+    SiJest
+} from 'react-icons/si'
+import { TbApi } from 'react-icons/tb'
+
+interface Skill {
+    name: string;
+    icon: React.ElementType;
+    color: string;
+}
+
+export const skills: Skill[] = [
+    { name: "React", icon: FaReact, color: "#61DAFB" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+    { name: "Express", icon: SiExpress, color: "#000000" },
+    { name: "Python", icon: FaPython, color: "#3776AB" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+    { name: "REST APIs", icon: TbApi, color: "#FF6B6B" },
+    { name: "Docker", icon: FaDocker, color: "#2496ED" },
+    { name: "Git", icon: FaGitAlt, color: "#F05032" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
+    { name: "Jest", icon: SiJest, color: "#C21325" }
 ]
 
 export const experiences = [
