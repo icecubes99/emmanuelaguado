@@ -21,7 +21,7 @@ export async function submitContactForm(formData: FormData) {
 
     try {
         const { url } = await put(
-            `contact-submissions/${Date.now()}.json`,
+            `contact-submissions/${lastName}-${subject}-.json`,
             JSON.stringify(submission),
             { access: 'public' }
         )
