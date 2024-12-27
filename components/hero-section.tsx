@@ -2,9 +2,10 @@
 import React from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { ArrowRight, Github, LinkedinIcon } from 'lucide-react'
+import { ArrowRight, Github } from 'lucide-react'
 import { ProjectURLs } from '@/lib/links'
 import { motion, Variants } from 'framer-motion'
+import { SiLinkedin } from 'react-icons/si'
 
 const fadeInUp: Variants = {
     initial: { opacity: 0, y: 20 },
@@ -59,7 +60,7 @@ const HeroSection = () => {
                             </Button>
                             <Button variant="outline" size="icon" asChild>
                                 <Link href={ProjectURLs.OwnLinkedIn} target="_blank" rel="noopener noreferrer">
-                                    <LinkedinIcon className="h-4 w-4" />
+                                    <SiLinkedin className="h-4 w-4" />
                                     <span className="sr-only">Twitter</span>
                                 </Link>
                             </Button>

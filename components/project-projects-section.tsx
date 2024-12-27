@@ -6,8 +6,8 @@ import { Button } from './ui/button'
 import { Clock, Diamond, DollarSign, ExternalLink, Github, Laptop, Moon, SquareAsterisk, Users, Star, Heart, Globe } from 'lucide-react'
 import { CardContent } from './ui/card'
 import Link from 'next/link'
-import Image from 'next/image'
 import CardTopBorder from './ui/card-with-top-border'
+import { FaBehance } from 'react-icons/fa'
 
 const IconMap = {
     users: Users,
@@ -77,7 +77,7 @@ const ProjectsProjectsSection = () => {
                                             project.behanceLink && (
                                                 <Link href={project.behanceLink} target="_blank" rel="noopener noreferrer">
                                                     <Button variant="outline" className="gap-2">
-                                                        <Image src={"/Behance.svg"} width={20} height={20} alt='Behance' />
+                                                        <FaBehance className="h-4 w-4" />
                                                         Behance Post
                                                     </Button>
                                                 </Link>

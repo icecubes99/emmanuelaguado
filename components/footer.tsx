@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button } from './ui/button'
-import { Github, LinkedinIcon, Mail } from 'lucide-react'
+import { Github, Mail } from 'lucide-react'
 import Link from 'next/link'
 import { ProjectURLs } from '@/lib/links'
-import Image from 'next/image'
+import { FaBehance } from 'react-icons/fa'
+import { SiLinkedin } from 'react-icons/si'
 
 const Footer = () => {
     return (
@@ -22,12 +23,12 @@ const Footer = () => {
                         </Link>
                         <Link href={ProjectURLs.OwnLinkedIn} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
-                                <LinkedinIcon className="h-5 w-5" />
+                                <SiLinkedin className="h-5 w-5" />
                             </Button>
                         </Link>
                         <Link href={ProjectURLs.OwnBehance} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
-                                <Image src={"/Behance.svg"} width={20} height={20} alt='Behance' />
+                                <FaBehance className="h-5 w-5" />
                             </Button>
                         </Link>
                         <Link href={"/contact"}>

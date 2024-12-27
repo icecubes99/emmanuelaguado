@@ -2,9 +2,11 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardTitle } from './ui/card'
 import Image from 'next/image'
 import { Button } from './ui/button'
-import { ExternalLink, FigmaIcon, Github, LinkedinIcon } from 'lucide-react'
+import { ExternalLink, FigmaIcon, Github } from 'lucide-react'
 import Link from 'next/link'
 import { Badge } from './ui/badge'
+import { FaBehance } from 'react-icons/fa'
+import { SiLinkedin } from 'react-icons/si'
 
 interface HeroProjectsCardProps {
     title: string
@@ -13,12 +15,13 @@ interface HeroProjectsCardProps {
     githubLink?: string
     figmaLink?: string;
     linkedInLink?: string;
+    behanceLink?: string;
     liveLink?: string
     badges?: string[]
     alt?: string
 }
 
-const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt, figmaLink, linkedInLink, badges = [] }: HeroProjectsCardProps) => {
+const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt, figmaLink, linkedInLink, badges = [], behanceLink }: HeroProjectsCardProps) => {
     return (
         <Card className="flex flex-col md:flex-row overflow-hidden border-2">
             <div className="md:w-1/2 relative aspect-video">
@@ -26,7 +29,7 @@ const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt
                     src={image}
                     alt={alt || title + " image"}
                     fill
-                    className="object-cover"
+                    className="object-cover md:border-r-2"
                 />
             </div>
             <CardContent className="md:w-1/2 p-6">
@@ -50,7 +53,12 @@ const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt
                         </Link>)}
                         {linkedInLink && (<Link href={linkedInLink || ""} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
-                                <LinkedinIcon className="h-5 w-5" />
+                                <SiLinkedin className="h-5 w-5" />
+                            </Button>
+                        </Link>)}
+                        {behanceLink && (<Link href={behanceLink || ""} target="_blank" rel="noopener noreferrer">
+                            <Button variant="ghost" size="icon">
+                                <FaBehance className="h-5 w-5" />
                             </Button>
                         </Link>)}
                     </div>
@@ -60,7 +68,7 @@ const HeroProjectsCard = ({ title, description, image, githubLink, liveLink, alt
                 </CardDescription>
                 <div className="flex flex-wrap gap-2">
                     {badges.map((badge, index) => (
-                        <Badge key={index}>{badge}</Badge>
+                        <Badge variant={"secondary"} key={index}>{badge}</Badge>
                     ))}
                 </div>
             </CardContent>

@@ -19,6 +19,8 @@ export enum ProjectURLs {
     OwnLinkedIn = 'https://www.linkedin.com/in/EmmanuelAguado/',
     OwnBehance = 'https://www.behance.net/emmanueaguado',
     OwnResume = "https://drive.google.com/file/d/1K68dDTDnBCkrC_KQ6NM3I9L7Z4Mdvu9L/view?usp=sharing",
+    OwnEmail = 'mailto:aguado@emman@gmail.com',
+    OwnLetterboxd = 'https://letterboxd.com/icecubes99/',
     THAPBehance = 'https://www.behance.net/gallery/215005673/The-Happy-Asian-Pessimist',
     EMSGithub = "https://github.com/icecubes99/ems-v2",
     EMSLiveLink = "https://ems-v2.vercel.app/",

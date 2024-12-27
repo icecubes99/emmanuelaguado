@@ -1,11 +1,12 @@
 "use client"
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github } from 'lucide-react'
 import { Card, CardContent } from './ui/card'
 import { Button } from './ui/button'
-import Image from 'next/image'
 import { ProjectURLs } from '@/lib/links'
+import { FaBehance } from 'react-icons/fa'
+import { SiLetterboxd, SiLinkedin } from 'react-icons/si'
 
 const socialLinks = [
     {
@@ -18,19 +19,19 @@ const socialLinks = [
         platform: 'LinkedIn',
         username: 'emmanuelaguado',
         link: ProjectURLs.OwnLinkedIn,
-        icon: <Linkedin className="h-6 w-6" />,
+        icon: <SiLinkedin className="h-6 w-6" />,
     },
     {
         platform: 'Behance',
         username: 'emmanueaguado',
         link: ProjectURLs.OwnBehance,
-        icon: <Image src={"/Behance.svg"} width={25} height={25} alt='Behance' />
+        icon: <FaBehance className="h-6 w-6" />,
     },
     {
-        platform: 'Email',
-        username: 'aguado.emman@gmail.com',
-        link: 'mailto:aguado@emman@gmail.com',
-        icon: <Mail className="h-6 w-6" />,
+        platform: 'Letterboxd',
+        username: 'icecubes99',
+        link: ProjectURLs.OwnLetterboxd,
+        icon: <SiLetterboxd className="h-6 w-6" />,
     }
 ]
 

@@ -2,13 +2,15 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { Button } from './ui/button'
-import { Briefcase, Calendar, Download, Github, LinkedinIcon } from 'lucide-react'
+import { Briefcase, Calendar, Download, Github } from 'lucide-react'
 import Link from 'next/link'
 import { ProjectURLs } from '@/lib/links'
 import { Badge } from './ui/badge'
 import { certifications, experiences, skills } from '@/lib/skills-experiences'
 import { Card, CardContent } from './ui/card'
 import CardTopBorder from './ui/card-with-top-border'
+import { FaBehance, } from 'react-icons/fa'
+import { SiLinkedin } from 'react-icons/si'
 
 const AboutBioSection = () => {
     const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
@@ -40,12 +42,12 @@ const AboutBioSection = () => {
                             </Link>
                             <Link href={ProjectURLs.OwnLinkedIn} target="_blank" rel="noopener noreferrer">
                                 <Button variant="ghost" size="icon">
-                                    <LinkedinIcon className="h-5 w-5" />
+                                    <SiLinkedin className="h-5 w-5" />
                                 </Button>
                             </Link>
                             <Link href={ProjectURLs.OwnBehance} target="_blank" rel="noopener noreferrer">
                                 <Button variant="ghost" size="icon">
-                                    <Image src={"/Behance.svg"} width={20} height={20} alt='Behance' />
+                                    <FaBehance className="h-5 w-5" />
                                 </Button>
                             </Link>
                         </div>

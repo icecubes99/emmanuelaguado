@@ -19,6 +19,7 @@ const HeroProjectsSection = () => {
                             image={project.image}
                             githubLink={project.githubLink}
                             liveLink={project.liveLink}
+                            behanceLink={project.behanceLink}
                             badges={project.badges}
                         />
                     ))}
