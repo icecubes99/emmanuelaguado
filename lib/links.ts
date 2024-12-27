@@ -26,3 +26,7 @@ export enum ProjectURLs {
     EMSLiveLink = "https://ems-v2.vercel.app/",
     KIIWebsiteBehance = "https://www.behance.net/gallery/215006743/Kupler-Landing-Page"
 }
+
+export enum CredentialURLs {
+    IntroToCybersecurity = "https://www.credly.com/badges/8ea58519-9e14-4e62-b3cd-89f60a83a05a/linked_in_profile",
+}

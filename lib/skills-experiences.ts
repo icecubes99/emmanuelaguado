@@ -16,6 +16,7 @@ import {
     SiJest
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
+import { CredentialURLs } from './links';
 
 interface Skill {
     name: string;
@@ -58,6 +59,6 @@ export const certifications = [
         name: "CISCO Intro to Cybersecurity",
         issuer: "CISCO",
         year: "2024",
-        link: ""
+        link: CredentialURLs.IntroToCybersecurity
     },
 ]
