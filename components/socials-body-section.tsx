@@ -89,15 +89,15 @@ const SocialLinkCard: React.FC<SocialLinkCardProps> = ({ platform, username, lin
         >
             <Card className="overflow-hidden bg-background border-2 border-primary/10 hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
-                    <div className="flex items-center space-x-4">
+                    <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                             {icon}
                         </div>
-                        <div className="flex-grow">
+                        <div className="flex-grow md:relative flex flex-col items-center md:items-start">
                             <h3 className="text-lg font-semibold">{platform}</h3>
                             <p className="text-sm text-muted-foreground">@{username}</p>
                         </div>
-                        <Button asChild variant="ghost" className="hover:bg-primary/10">
+                        <Button asChild variant="ghost" className="hover:bg-primary/10 mt-2 md:mt-0">
                             <a href={link} target="_blank" rel="noopener noreferrer" className="font-semibold">
                                 Connect
                             </a>
