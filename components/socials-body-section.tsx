@@ -97,7 +97,7 @@ const SocialLinkCard: React.FC<SocialLinkCardProps> = ({ platform, username, lin
                             <h3 className="text-lg font-semibold">{platform}</h3>
                             <p className="text-sm text-muted-foreground">@{username}</p>
                         </div>
-                        <Button asChild variant="ghost" className="hover:bg-primary/10 mt-2 md:mt-0">
+                        <Button asChild variant="secondary" className="hover:bg-primary/10 mt-2 md:mt-0">
                             <a href={link} target="_blank" rel="noopener noreferrer" className="font-semibold">
                                 Connect
                             </a>
