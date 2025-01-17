@@ -30,7 +30,7 @@ const ProjectsProjectsSection = () => {
                 <div className="space-y-12">
                     {projectsData.map((project, index) => (
                         <div key={index} className="space-y-4">
-                            <div className='flex flex-row justify-between items-center'>
+                            <div className='flex md:flex-row flex-col justify-between md:items-center items-start'>
                                 <h2 className="text-3xl font-bold">{project.title}</h2>
                                 <h2 className="text-2xl opacity-80 font-bold">{project.year}</h2>
                             </div>
