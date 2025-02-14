@@ -9,7 +9,7 @@ const NavBar = () => {
             <div className='flex flex-row gap-3 lg:gap-5 items-center'>
                 <div className='lg:pr-5 text-sm'>
                     <Link href={"/"}>
-                        <span className='font-extrabold'>emmanuelaguado</span>.com
+                        <span className='font-extrabold text-sm'>emmanaguado</span>.com
                     </Link>
                 </div>
                 <div className='hidden md:flex gap-5 lg:gap-10'>
