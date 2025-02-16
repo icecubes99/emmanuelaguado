@@ -17,7 +17,7 @@ const fadeInUp: Variants = {
 
 const CollabCard = ({ collabUser }: { collabUser: CollabUser[] }) => {
     return (
-        <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto mb-16">
+        <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3 max-w-4xl mx-auto mb-16">
             {collabUser.map((collaborator) => (
                 <motion.div
                     variants={fadeInUp}

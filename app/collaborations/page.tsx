@@ -1,6 +1,7 @@
 import CollabCard from '@/components/collaboration-card'
 import CollabHeroSection from '@/components/collaboration-hero-section'
 import Footer from '@/components/footer'
+import HeroCallToActionSection from '@/components/hero-call-to-action-section'
 import UniversalLayout from '@/components/margin'
 import NavBar from '@/components/navbar'
 import React from 'react'
@@ -48,6 +49,7 @@ async function Collaborations() {
             <UniversalLayout>
                 <CollabCard collabUser={data?.data || []} />
             </UniversalLayout>
+            <HeroCallToActionSection />
             <Footer />
         </div>
     )

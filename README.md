@@ -13,7 +13,6 @@
 - Project showcase
 - Skills and experience overview
 - Contact form
-- Dark mode support
 
 ## 💻 Tech Stack
 
@@ -41,4 +40,4 @@ Feel free to reach out to me through my portfolio website's contact form or conn
 ---
 
 Made with ❤️ by Emmanuel Aguado
-https://emmanuelaguado.vercel.app/
+**[emmanuelaguado.vercel.app](https://emmanuelaguado.vercel.app/)**
