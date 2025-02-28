@@ -7,14 +7,14 @@ export const NavBarLinks = [
     name: "About",
     link: "/about",
   },
-  // {
-  //   name: "Socials",
-  //   link: "/socials",
-  // },
   {
-    name: "Collaborations",
-    link: "/collaborations",
+    name: "Socials",
+    link: "/socials",
   },
+  // {
+  //   name: "Collaborations",
+  //   link: "/collaborations",
+  // },
 ];
 
 export enum ProjectURLs {
