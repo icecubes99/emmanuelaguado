@@ -45,7 +45,7 @@ export const experiences = [
   {
     title: "Fullstack Developer",
     company: "SAMAHAN Systems Development",
-    period: "Feb 2025",
+    period: "Feb 2025 - Present",
     description: [
       "Developed and maintained web applications using React and Node.js",
       "Collaborated with cross-functional teams to define, design, and ship new features",
