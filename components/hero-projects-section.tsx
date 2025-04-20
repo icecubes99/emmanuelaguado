@@ -17,6 +17,7 @@ const HeroProjectsSection = () => {
                             title={project.title}
                             description={project.description}
                             image={project.image}
+                            figmaLink={project.figmaLink}
                             githubLink={project.githubLink}
                             liveLink={project.liveLink}
                             behanceLink={project.behanceLink}
