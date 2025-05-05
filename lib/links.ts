@@ -33,4 +33,5 @@ export enum ProjectURLs {
 
 export enum CredentialURLs {
   IntroToCybersecurity = "https://www.credly.com/badges/8ea58519-9e14-4e62-b3cd-89f60a83a05a/linked_in_profile",
+  IntroToNetoworks = "https://www.credly.com/badges/c8c3d7d5-8645-4af6-ac42-7995c2692471/linked_in_profile",
 }

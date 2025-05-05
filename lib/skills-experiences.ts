@@ -66,6 +66,12 @@ export const experiences = [
 
 export const certifications = [
   {
+    name: "CCNA: Introduction to Networks",
+    issuer: "CISCO",
+    year: "2025",
+    link: CredentialURLs.IntroToNetoworks,
+  },
+  {
     name: "CISCO Intro to Cybersecurity",
     issuer: "CISCO",
     year: "2024",
