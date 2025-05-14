@@ -43,6 +43,19 @@ export const skills: Skill[] = [
 
 export const experiences = [
   {
+    title: "Frontend Developer Intern",
+    company: "Ingenuity Software",
+    period: "Apr 2025 - Present",
+    description: [
+      "Developed and enhanced user interfaces using Next.js and Material-UI (MUI)",
+      "Translated UI/UX designs from Figma into responsive and functional web components",
+      "Collaborated with project managers and designers, managing tasks through a ticketing system",
+      "Utilized Bitbucket for version control and collaborative development",
+      "Identified and resolved bugs and design inconsistencies to improve application stability and user experience",
+      "Ensured code quality by adhering to best practices, coding standards, and proper naming conventions",
+    ],
+  },
+  {
     title: "Fullstack Developer",
     company: "SAMAHAN Systems Development",
     period: "Feb 2025 - Present",
