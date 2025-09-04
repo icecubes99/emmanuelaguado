@@ -12,6 +12,17 @@ import CardTopBorder from './ui/card-with-top-border'
 import { FaBehance, } from 'react-icons/fa'
 import { SiLinkedin } from 'react-icons/si'
 
+const getBannerColorClass = (bannerColor: string): string => {
+    switch (bannerColor) {
+        case '[#ff3404]':
+            return 'bg-[#ff3404]'
+        case 'primary':
+            return 'bg-primary'
+        default:
+            return 'bg-primary'
+    }
+}
+
 const AboutBioSection = () => {
     const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
     return (
@@ -81,7 +92,7 @@ const AboutBioSection = () => {
                         <div className="space-y-8">
                             {experiences.map((exp, index) => (
                                 <Card key={index} className="relative overflow-hidden">
-                                    <div className={`absolute top-0 left-0 w-1 h-full bg-${exp.bannerColor}`}></div>
+                                    <div className={`absolute top-0 left-0 w-1 h-full ${getBannerColorClass(exp.bannerColor)}`}></div>
                                     <CardContent className="p-6 pl-8">
                                         <div className="flex items-center mb-2">
                                             <Briefcase className="w-5 h-5 text-primary mr-2" />
