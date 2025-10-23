@@ -21,7 +21,7 @@ export enum ProjectURLs {
   OwnGithub = "https://github.com/icecubes99",
   OwnLinkedIn = "https://www.linkedin.com/in/EmmanuelAguado/",
   OwnBehance = "https://www.behance.net/emmanueaguado",
-  OwnResume = "https://drive.google.com/file/d/1K68dDTDnBCkrC_KQ6NM3I9L7Z4Mdvu9L/view?usp=sharing",
+  OwnResume = "https://drive.google.com/file/d/1eW4-L3K_4hhGxSbKHzrKQu_-ZakzxuJv/view?usp=sharing",
   OwnEmail = "mailto:aguado@emman@gmail.com",
   OwnLetterboxd = "https://letterboxd.com/icecubes99/",
   THAPBehance = "https://www.behance.net/gallery/215005673/The-Happy-Asian-Pessimist",

@@ -45,13 +45,13 @@ export const experiences = [
   {
     title: "Software Developer",
     company: "Ingenuity Software",
-    period: "Jun 2025 - Present",
+    period: "Jun 2025 - Sept 2025",
     description: [
       "Led development of full-stack web applications using React, Node.js, and TypeScript",
       "Architected and implemented database solutions with Supabase",
-      "Integrated AI tools including Claude for code generation and MCP tools to enhance development productivity and code quality"
+      "Integrated AI tools including Claude for code generation and MCP tools to enhance development productivity and code quality",
     ],
-    bannerColor: "[#ff3404]"
+    bannerColor: "[#ff3404]",
   },
   {
     title: "Frontend Developer Intern",
@@ -65,7 +65,7 @@ export const experiences = [
       "Identified and resolved bugs and design inconsistencies to improve application stability and user experience",
       "Ensured code quality by adhering to best practices, coding standards, and proper naming conventions",
     ],
-    bannerColor: "[#ff3404]"
+    bannerColor: "[#ff3404]",
   },
   {
     title: "Fullstack Developer",
@@ -76,7 +76,7 @@ export const experiences = [
       "Collaborated with cross-functional teams to define, design, and ship new features",
       "Optimized applications for maximum speed and scalability",
     ],
-    bannerColor: "primary"
+    bannerColor: "primary",
   },
   {
     title: "Fullstack Developer",
@@ -87,7 +87,7 @@ export const experiences = [
       "Designed and implemented database schemas with PostgreSQL and working with ORMs such as Prisma",
       "Created wireframes, mockups, and prototypes using Figma to align with client specifications",
     ],
-    bannerColor: "primary"
+    bannerColor: "primary",
   },
 ];
 
