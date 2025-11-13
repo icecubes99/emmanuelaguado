@@ -45,7 +45,7 @@ export const experiences = [
   {
     title: "Software Developer",
     company: "Ingenuity Software",
-    period: "Jun 2025 - Sept 2025",
+    period: "Jun 2025 - Oct 2025",
     description: [
       "Led development of full-stack web applications using React, Node.js, and TypeScript",
       "Architected and implemented database solutions with Supabase",
