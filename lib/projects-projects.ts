@@ -32,6 +32,40 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "SubViz - Subscription Visualizer",
+    description: "A Visualizer for your Monthly/Yearly Subscriptions",
+    image: "/SubViz/1.png",
+    images: ["/SubViz/1.png", "/SubViz/2.png", "/SubViz/3.png"],
+    alt: "SubViz - Subscription Visualizer",
+    liveLink: ProjectURLs.SubVizSite,
+    badges: [
+      "Vite",
+      "TypeScript",
+      "TailwindCSS",
+      "Vercel",
+      "Data Visualization",
+      "Finance",
+    ],
+    year: "2025",
+    features: [
+      {
+        icon: "money",
+        title: "Cost Analysis",
+        description: "Track monthly and yearly spending at a glance",
+      },
+      {
+        icon: "modern",
+        title: "Visual Dashboard",
+        description: "Clean visualization of all your subscriptions",
+      },
+      {
+        icon: "clean",
+        title: "Easy Management",
+        description: "Simple tools to add, edit, and color-code subscriptions",
+      },
+    ],
+  },
+  {
     title: "Minecraft Block Diary",
     description:
       "A Minecraft helper app mock for saving locations, journals, and builds.",

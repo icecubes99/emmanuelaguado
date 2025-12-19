@@ -15,6 +15,21 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "SubViz - Subscription Visualizer",
+    description: "A Visualizer for your Monthly/Yearly Subscriptions",
+    image: "/SubViz/1.png",
+    alt: "SubViz - Subscription Visualizer",
+    liveLink: ProjectURLs.SubVizSite,
+    badges: [
+      "Vite",
+      "TypeScript",
+      "TailwindCSS",
+      "Vercel",
+      "Data Visualization",
+      "Finance",
+    ],
+  },
+  {
     title: "Minecraft Block Diary",
     description:
       "A Minecraft helper app mock for saving locations, journals, and builds.",
