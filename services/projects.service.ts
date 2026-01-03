@@ -172,9 +172,12 @@ export const createProject = async (input: CreateProjectInput) => {
   return result;
 };
 
-export const updateProject = async (id: number, input: Partial<CreateProjectInput>) => {
+export const updateProject = async (
+  id: number,
+  input: Partial<CreateProjectInput>
+) => {
   const projectId = id;
-  
+
   // Check if project exists
   const existing = await db.query.projects.findFirst({
     where: eq(projects.id, projectId),
@@ -193,11 +196,21 @@ export const updateProject = async (id: number, input: Partial<CreateProjectInpu
         ...(input.description && { description: input.description }),
         ...(input.image && { image: input.image }),
         ...(input.alt !== undefined && { alt: input.alt || null }),
-        ...(input.githubLink !== undefined && { githubLink: input.githubLink || null }),
-        ...(input.figmaLink !== undefined && { figmaLink: input.figmaLink || null }),
-        ...(input.behanceLink !== undefined && { behanceLink: input.behanceLink || null }),
-        ...(input.linkedInLink !== undefined && { linkedInLink: input.linkedInLink || null }),
-        ...(input.liveLink !== undefined && { liveLink: input.liveLink || null }),
+        ...(input.githubLink !== undefined && {
+          githubLink: input.githubLink || null,
+        }),
+        ...(input.figmaLink !== undefined && {
+          figmaLink: input.figmaLink || null,
+        }),
+        ...(input.behanceLink !== undefined && {
+          behanceLink: input.behanceLink || null,
+        }),
+        ...(input.linkedInLink !== undefined && {
+          linkedInLink: input.linkedInLink || null,
+        }),
+        ...(input.liveLink !== undefined && {
+          liveLink: input.liveLink || null,
+        }),
         ...(input.year !== undefined && { year: input.year || null }),
         updatedAt: new Date(),
       })

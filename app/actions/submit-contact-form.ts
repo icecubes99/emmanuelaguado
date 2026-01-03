@@ -11,7 +11,10 @@ const contactFormSchema = z.object({
   lastName: z.string().min(1, "Last name is required").max(100),
   email: z.string().email("Invalid email address"),
   subject: z.string().min(1, "Subject is required").max(200),
-  message: z.string().min(10, "Message must be at least 10 characters").max(5000),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(5000),
 });
 
 export async function submitContactForm(formData: FormData) {
@@ -31,7 +34,8 @@ export async function submitContactForm(formData: FormData) {
     };
   }
 
-  const { firstName, lastName, email, subject, message } = validationResult.data;
+  const { firstName, lastName, email, subject, message } =
+    validationResult.data;
 
   const submission = {
     firstName,

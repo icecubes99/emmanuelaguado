@@ -10,7 +10,9 @@ let transporter: nodemailer.Transporter | null = null;
 export function getEmailTransporter(): nodemailer.Transporter {
   if (!transporter) {
     if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
-      throw new Error("Email configuration is missing. Set GMAIL_USER and GMAIL_PASS environment variables.");
+      throw new Error(
+        "Email configuration is missing. Set GMAIL_USER and GMAIL_PASS environment variables."
+      );
     }
 
     transporter = nodemailer.createTransport({
