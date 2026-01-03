@@ -1,19 +1,20 @@
 "use server";
 
 import {
-  getSkills,
-  getExperiences,
-  getCertifications,
-  getProfile,
-} from "@/services/common.service";
+  getCachedSkills,
+  getCachedExperiences,
+  getCachedCertifications,
+  getCachedProfile,
+} from "@/services/cached.service";
 
 /**
  * Common Actions
+ * Uses cached service layer for improved performance.
  */
 
 export async function fetchSkills() {
   try {
-    const data = await getSkills();
+    const data = await getCachedSkills();
     return { success: true, data };
   } catch (error) {
     console.error("Failed to fetch skills:", error);
@@ -23,7 +24,7 @@ export async function fetchSkills() {
 
 export async function fetchExperiences() {
   try {
-    const data = await getExperiences();
+    const data = await getCachedExperiences();
     return { success: true, data };
   } catch (error) {
     console.error("Failed to fetch experiences:", error);
@@ -33,7 +34,7 @@ export async function fetchExperiences() {
 
 export async function fetchCertifications() {
   try {
-    const data = await getCertifications();
+    const data = await getCachedCertifications();
     return { success: true, data };
   } catch (error) {
     console.error("Failed to fetch certifications:", error);
@@ -43,7 +44,7 @@ export async function fetchCertifications() {
 
 export async function fetchProfile() {
   try {
-    const data = await getProfile();
+    const data = await getCachedProfile();
     return { success: true, data };
   } catch (error) {
     console.error("Failed to fetch profile:", error);

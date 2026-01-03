@@ -1,25 +1,37 @@
-import { pgTable, serial, text, timestamp, integer } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  serial,
+  text,
+  timestamp,
+  integer,
+  index,
+  primaryKey,
+} from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
 // Projects Table
-export const projects = pgTable("projects", {
-  id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  description: text("description").notNull(),
-  image: text("image").notNull(), // Main thumbnail
-  alt: text("alt"),
+export const projects = pgTable(
+  "projects",
+  {
+    id: serial("id").primaryKey(),
+    title: text("title").notNull(),
+    description: text("description").notNull(),
+    image: text("image").notNull(), // Main thumbnail
+    alt: text("alt"),
 
-  // Links
-  githubLink: text("github_link"),
-  figmaLink: text("figma_link"),
-  behanceLink: text("behance_link"),
-  linkedInLink: text("linkedin_link"),
-  liveLink: text("live_link"),
+    // Links
+    githubLink: text("github_link"),
+    figmaLink: text("figma_link"),
+    behanceLink: text("behance_link"),
+    linkedInLink: text("linkedin_link"),
+    liveLink: text("live_link"),
 
-  year: text("year"),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at").defaultNow().notNull(),
-});
+    year: text("year"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  },
+  (table) => [index("projects_year_idx").on(table.year)]
+);
 
 // Badges (Many-to-Many with Projects)
 export const badges = pgTable("badges", {
@@ -27,14 +39,18 @@ export const badges = pgTable("badges", {
   name: text("name").notNull().unique(),
 });
 
-export const projectsToBadges = pgTable("projects_to_badges", {
-  projectId: integer("project_id")
-    .notNull()
-    .references(() => projects.id, { onDelete: "cascade" }),
-  badgeId: integer("badge_id")
-    .notNull()
-    .references(() => badges.id, { onDelete: "cascade" }),
-});
+export const projectsToBadges = pgTable(
+  "projects_to_badges",
+  {
+    projectId: integer("project_id")
+      .notNull()
+      .references(() => projects.id, { onDelete: "cascade" }),
+    badgeId: integer("badge_id")
+      .notNull()
+      .references(() => badges.id, { onDelete: "cascade" }),
+  },
+  (table) => [primaryKey({ columns: [table.projectId, table.badgeId] })]
+);
 
 // Project Images (One-to-Many)
 export const projectImages = pgTable("project_images", {
@@ -57,43 +73,65 @@ export const projectFeatures = pgTable("project_features", {
 });
 
 // Skills Table
-export const skills = pgTable("skills", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  iconName: text("icon_name").notNull(), // Store icon identifier e.g. "FaReact"
-  color: text("color").notNull(),
-  order: integer("order").default(0).notNull(),
-});
+export const skills = pgTable(
+  "skills",
+  {
+    id: serial("id").primaryKey(),
+    name: text("name").notNull(),
+    iconName: text("icon_name").notNull(), // Store icon identifier e.g. "FaReact"
+    color: text("color").notNull(),
+    order: integer("order").default(0).notNull(),
+  },
+  (table) => [index("skills_order_idx").on(table.order)]
+);
 
 // Experience Table
-export const experiences = pgTable("experiences", {
-  id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  company: text("company").notNull(),
-  period: text("period").notNull(),
-  bannerColor: text("banner_color").notNull(),
-  order: integer("order").default(0).notNull(),
-});
+export const experiences = pgTable(
+  "experiences",
+  {
+    id: serial("id").primaryKey(),
+    title: text("title").notNull(),
+    company: text("company").notNull(),
+    period: text("period").notNull(),
+    bannerColor: text("banner_color").notNull(),
+    order: integer("order").default(0).notNull(),
+  },
+  (table) => [index("experiences_order_idx").on(table.order)]
+);
 
 // Experience Descriptions (One-to-Many)
-export const experienceDescriptions = pgTable("experience_descriptions", {
-  id: serial("id").primaryKey(),
-  text: text("text").notNull(),
-  experienceId: integer("experience_id")
-    .notNull()
-    .references(() => experiences.id, { onDelete: "cascade" }),
-  order: integer("order").default(0).notNull(),
-});
+export const experienceDescriptions = pgTable(
+  "experience_descriptions",
+  {
+    id: serial("id").primaryKey(),
+    text: text("text").notNull(),
+    experienceId: integer("experience_id")
+      .notNull()
+      .references(() => experiences.id, { onDelete: "cascade" }),
+    order: integer("order").default(0).notNull(),
+  },
+  (table) => [
+    index("exp_desc_experience_id_idx").on(table.experienceId),
+    index("exp_desc_order_idx").on(table.order),
+  ]
+);
 
 // Certifications Table
-export const certifications = pgTable("certifications", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  issuer: text("issuer").notNull(),
-  year: text("year").notNull(),
-  link: text("link").notNull(),
-  order: integer("order").default(0).notNull(),
-});
+export const certifications = pgTable(
+  "certifications",
+  {
+    id: serial("id").primaryKey(),
+    name: text("name").notNull(),
+    issuer: text("issuer").notNull(),
+    year: text("year").notNull(),
+    link: text("link").notNull(),
+    order: integer("order").default(0).notNull(),
+  },
+  (table) => [
+    index("certifications_year_idx").on(table.year),
+    index("certifications_order_idx").on(table.order),
+  ]
+);
 
 // Profile/Global Settings
 export const profile = pgTable("profile", {

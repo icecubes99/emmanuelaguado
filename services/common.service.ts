@@ -1,5 +1,11 @@
 import { db } from "@/db";
-import { skills, experiences, certifications, profile } from "@/db/schema";
+import {
+  skills,
+  experiences,
+  certifications,
+  profile,
+  experienceDescriptions,
+} from "@/db/schema";
 import { asc, desc } from "drizzle-orm";
 
 /**
@@ -19,10 +25,10 @@ export const getExperiences = async () => {
   return await db.query.experiences.findMany({
     with: {
       description: {
-        orderBy: [asc(experiences.order)],
+        orderBy: [asc(experienceDescriptions.order)],
       },
     },
-    orderBy: [desc(experiences.order)], // Assuming higher order = more recent or specific order
+    orderBy: [desc(experiences.order)],
   });
 };
 

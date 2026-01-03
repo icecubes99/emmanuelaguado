@@ -2,14 +2,36 @@
 
 import { put } from "@vercel/blob";
 import { revalidatePath } from "next/cache";
-import nodemailer from "nodemailer";
+import { getEmailTransporter } from "@/lib/email";
+import { z } from "zod";
+
+// Validation schema for contact form
+const contactFormSchema = z.object({
+  firstName: z.string().min(1, "First name is required").max(100),
+  lastName: z.string().min(1, "Last name is required").max(100),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(1, "Subject is required").max(200),
+  message: z.string().min(10, "Message must be at least 10 characters").max(5000),
+});
 
 export async function submitContactForm(formData: FormData) {
-  const firstName = formData.get("firstName") as string;
-  const lastName = formData.get("lastName") as string;
-  const email = formData.get("email") as string;
-  const subject = formData.get("subject") as string;
-  const message = formData.get("message") as string;
+  // Validate input
+  const validationResult = contactFormSchema.safeParse({
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  });
+
+  if (!validationResult.success) {
+    return {
+      success: false,
+      message: validationResult.error.errors[0]?.message || "Invalid form data",
+    };
+  }
+
+  const { firstName, lastName, email, subject, message } = validationResult.data;
 
   const submission = {
     firstName,
@@ -29,14 +51,8 @@ export async function submitContactForm(formData: FormData) {
     );
     console.log("Submission stored at", url);
 
-    // 2. Send Email via Nodemailer
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
-      },
-    });
+    // 2. Send Email via reusable transporter
+    const transporter = getEmailTransporter();
 
     const mailOptions = {
       from: process.env.GMAIL_USER,
