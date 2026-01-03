@@ -6,7 +6,9 @@ interface EditProjectPageProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function EditProjectPage({ params }: EditProjectPageProps) {
+export default async function EditProjectPage({
+  params,
+}: EditProjectPageProps) {
   const { id } = await params;
   const project = await getProjectById(id);
 

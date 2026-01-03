@@ -109,7 +109,9 @@ export default function NewProjectPage() {
         </Link>
         <div>
           <h1 className="text-3xl font-bold">New Project</h1>
-          <p className="text-muted-foreground">Add a new project to your portfolio</p>
+          <p className="text-muted-foreground">
+            Add a new project to your portfolio
+          </p>
         </div>
       </div>
 
@@ -122,9 +124,15 @@ export default function NewProjectPage() {
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="title">Title *</Label>
-              <Input id="title" {...register("title")} placeholder="My Awesome Project" />
+              <Input
+                id="title"
+                {...register("title")}
+                placeholder="My Awesome Project"
+              />
               {errors.title && (
-                <p className="text-sm text-destructive">{errors.title.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.title.message}
+                </p>
               )}
             </div>
 
@@ -137,16 +145,24 @@ export default function NewProjectPage() {
                 rows={4}
               />
               {errors.description && (
-                <p className="text-sm text-destructive">{errors.description.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.description.message}
+                </p>
               )}
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="image">Image URL *</Label>
-                <Input id="image" {...register("image")} placeholder="/project-image.png" />
+                <Input
+                  id="image"
+                  {...register("image")}
+                  placeholder="/project-image.png"
+                />
                 {errors.image && (
-                  <p className="text-sm text-destructive">{errors.image.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.image.message}
+                  </p>
                 )}
               </div>
               <div className="space-y-2">
@@ -157,7 +173,11 @@ export default function NewProjectPage() {
 
             <div className="space-y-2">
               <Label htmlFor="alt">Alt Text</Label>
-              <Input id="alt" {...register("alt")} placeholder="Description of the image" />
+              <Input
+                id="alt"
+                {...register("alt")}
+                placeholder="Description of the image"
+              />
             </div>
           </CardContent>
         </Card>
@@ -165,7 +185,9 @@ export default function NewProjectPage() {
         <Card>
           <CardHeader>
             <CardTitle>Technologies & Badges</CardTitle>
-            <CardDescription>Add the technologies used in this project</CardDescription>
+            <CardDescription>
+              Add the technologies used in this project
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex gap-2">
@@ -206,7 +228,9 @@ export default function NewProjectPage() {
         <Card>
           <CardHeader>
             <CardTitle>Links</CardTitle>
-            <CardDescription>Add relevant links for this project</CardDescription>
+            <CardDescription>
+              Add relevant links for this project
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">

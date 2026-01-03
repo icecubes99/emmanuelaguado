@@ -147,7 +147,9 @@ export function EditExperienceForm({ experience }: EditExperienceFormProps) {
               <Label htmlFor="title">Job Title *</Label>
               <Input id="title" {...register("title")} />
               {errors.title && (
-                <p className="text-sm text-destructive">{errors.title.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.title.message}
+                </p>
               )}
             </div>
 
@@ -155,7 +157,9 @@ export function EditExperienceForm({ experience }: EditExperienceFormProps) {
               <Label htmlFor="company">Company *</Label>
               <Input id="company" {...register("company")} />
               {errors.company && (
-                <p className="text-sm text-destructive">{errors.company.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.company.message}
+                </p>
               )}
             </div>
 
@@ -164,7 +168,9 @@ export function EditExperienceForm({ experience }: EditExperienceFormProps) {
                 <Label htmlFor="period">Period *</Label>
                 <Input id="period" {...register("period")} />
                 {errors.period && (
-                  <p className="text-sm text-destructive">{errors.period.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.period.message}
+                  </p>
                 )}
               </div>
 

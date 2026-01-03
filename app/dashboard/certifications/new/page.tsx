@@ -110,7 +110,9 @@ export default function NewCertificationPage() {
                 placeholder="AWS Solutions Architect"
               />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -122,7 +124,9 @@ export default function NewCertificationPage() {
                 placeholder="Amazon Web Services"
               />
               {errors.issuer && (
-                <p className="text-sm text-destructive">{errors.issuer.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.issuer.message}
+                </p>
               )}
             </div>
 
@@ -131,7 +135,9 @@ export default function NewCertificationPage() {
                 <Label htmlFor="year">Year *</Label>
                 <Input id="year" {...register("year")} placeholder="2024" />
                 {errors.year && (
-                  <p className="text-sm text-destructive">{errors.year.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.year.message}
+                  </p>
                 )}
               </div>
 
@@ -149,7 +155,9 @@ export default function NewCertificationPage() {
                 placeholder="https://credential.example.com/..."
               />
               {errors.link && (
-                <p className="text-sm text-destructive">{errors.link.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.link.message}
+                </p>
               )}
             </div>
           </CardContent>

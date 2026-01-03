@@ -108,16 +108,16 @@ export function EditSkillForm({ skill }: EditSkillFormProps) {
         <Card>
           <CardHeader>
             <CardTitle>Skill Details</CardTitle>
-            <CardDescription>
-              Update the skill information
-            </CardDescription>
+            <CardDescription>Update the skill information</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name *</Label>
               <Input id="name" {...register("name")} />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -128,7 +128,9 @@ export function EditSkillForm({ skill }: EditSkillFormProps) {
                 Use icon names from react-icons (e.g., FaReact, SiNextdotjs)
               </p>
               {errors.iconName && (
-                <p className="text-sm text-destructive">{errors.iconName.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.iconName.message}
+                </p>
               )}
             </div>
 
@@ -145,7 +147,9 @@ export function EditSkillForm({ skill }: EditSkillFormProps) {
                   <Input {...register("color")} className="flex-1" />
                 </div>
                 {errors.color && (
-                  <p className="text-sm text-destructive">{errors.color.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.color.message}
+                  </p>
                 )}
               </div>
 

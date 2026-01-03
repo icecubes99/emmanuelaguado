@@ -1,10 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Plus, Pencil } from "lucide-react";
@@ -19,9 +14,7 @@ export default async function SkillsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold">Skills</h1>
-          <p className="text-muted-foreground">
-            Manage your technical skills
-          </p>
+          <p className="text-muted-foreground">Manage your technical skills</p>
         </div>
         <Link href="/dashboard/skills/new">
           <Button>

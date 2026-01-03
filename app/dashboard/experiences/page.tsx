@@ -20,9 +20,7 @@ export default async function ExperiencesPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold">Experiences</h1>
-          <p className="text-muted-foreground">
-            Manage your work experience
-          </p>
+          <p className="text-muted-foreground">Manage your work experience</p>
         </div>
         <Link href="/dashboard/experiences/new">
           <Button>

@@ -105,7 +105,9 @@ export default function NewExperiencePage() {
         </Link>
         <div>
           <h1 className="text-3xl font-bold">New Experience</h1>
-          <p className="text-muted-foreground">Add work experience to your portfolio</p>
+          <p className="text-muted-foreground">
+            Add work experience to your portfolio
+          </p>
         </div>
       </div>
 
@@ -124,7 +126,9 @@ export default function NewExperiencePage() {
                 placeholder="Software Engineer"
               />
               {errors.title && (
-                <p className="text-sm text-destructive">{errors.title.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.title.message}
+                </p>
               )}
             </div>
 
@@ -136,7 +140,9 @@ export default function NewExperiencePage() {
                 placeholder="Acme Inc."
               />
               {errors.company && (
-                <p className="text-sm text-destructive">{errors.company.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.company.message}
+                </p>
               )}
             </div>
 
@@ -149,7 +155,9 @@ export default function NewExperiencePage() {
                   placeholder="Jan 2023 - Present"
                 />
                 {errors.period && (
-                  <p className="text-sm text-destructive">{errors.period.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.period.message}
+                  </p>
                 )}
               </div>
 
@@ -183,7 +191,8 @@ export default function NewExperiencePage() {
           <CardHeader>
             <CardTitle>Description Points</CardTitle>
             <CardDescription>
-              Add bullet points describing your responsibilities and achievements
+              Add bullet points describing your responsibilities and
+              achievements
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">

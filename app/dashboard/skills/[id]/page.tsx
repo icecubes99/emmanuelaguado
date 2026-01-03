@@ -9,7 +9,7 @@ interface EditSkillPageProps {
 export default async function EditSkillPage({ params }: EditSkillPageProps) {
   const { id } = await params;
   const skillId = parseInt(id);
-  
+
   if (isNaN(skillId)) {
     notFound();
   }

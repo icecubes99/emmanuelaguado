@@ -43,7 +43,9 @@ export function DeleteItemButton({
       const result = await deleteAction(itemId);
       if (result.success) {
         toast({
-          title: `${itemType.charAt(0).toUpperCase() + itemType.slice(1)} deleted`,
+          title: `${
+            itemType.charAt(0).toUpperCase() + itemType.slice(1)
+          } deleted`,
           description: `"${itemName}" has been deleted.`,
         });
         router.refresh();

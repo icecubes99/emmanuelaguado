@@ -57,7 +57,10 @@ export async function createSkillAction(input: CreateSkillInput) {
   }
 }
 
-export async function updateSkillAction(id: number, input: Partial<CreateSkillInput>) {
+export async function updateSkillAction(
+  id: number,
+  input: Partial<CreateSkillInput>
+) {
   try {
     const skill = await updateSkill(id, input);
     invalidateSkillsCache();
@@ -139,7 +142,9 @@ export async function fetchCertifications() {
   }
 }
 
-export async function createCertificationAction(input: CreateCertificationInput) {
+export async function createCertificationAction(
+  input: CreateCertificationInput
+) {
   try {
     const cert = await createCertification(input);
     invalidateCertificationsCache();

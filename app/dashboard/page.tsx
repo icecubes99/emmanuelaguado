@@ -21,7 +21,9 @@ import { count } from "drizzle-orm";
 async function getStats() {
   const [projectCount] = await db.select({ count: count() }).from(projects);
   const [skillCount] = await db.select({ count: count() }).from(skills);
-  const [experienceCount] = await db.select({ count: count() }).from(experiences);
+  const [experienceCount] = await db
+    .select({ count: count() })
+    .from(experiences);
   const [certificationCount] = await db
     .select({ count: count() })
     .from(certifications);

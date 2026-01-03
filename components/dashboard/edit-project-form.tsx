@@ -152,15 +152,23 @@ export function EditProjectForm({ project }: EditProjectFormProps) {
               <Label htmlFor="title">Title *</Label>
               <Input id="title" {...register("title")} />
               {errors.title && (
-                <p className="text-sm text-destructive">{errors.title.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.title.message}
+                </p>
               )}
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="description">Description *</Label>
-              <Textarea id="description" {...register("description")} rows={4} />
+              <Textarea
+                id="description"
+                {...register("description")}
+                rows={4}
+              />
               {errors.description && (
-                <p className="text-sm text-destructive">{errors.description.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.description.message}
+                </p>
               )}
             </div>
 
@@ -169,7 +177,9 @@ export function EditProjectForm({ project }: EditProjectFormProps) {
                 <Label htmlFor="image">Image URL *</Label>
                 <Input id="image" {...register("image")} />
                 {errors.image && (
-                  <p className="text-sm text-destructive">{errors.image.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.image.message}
+                  </p>
                 )}
               </div>
               <div className="space-y-2">
@@ -188,7 +198,9 @@ export function EditProjectForm({ project }: EditProjectFormProps) {
         <Card>
           <CardHeader>
             <CardTitle>Technologies & Badges</CardTitle>
-            <CardDescription>Add the technologies used in this project</CardDescription>
+            <CardDescription>
+              Add the technologies used in this project
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex gap-2">
@@ -229,7 +241,9 @@ export function EditProjectForm({ project }: EditProjectFormProps) {
         <Card>
           <CardHeader>
             <CardTitle>Links</CardTitle>
-            <CardDescription>Add relevant links for this project</CardDescription>
+            <CardDescription>
+              Add relevant links for this project
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">

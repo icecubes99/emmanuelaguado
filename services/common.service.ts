@@ -51,7 +51,10 @@ export const createSkill = async (input: CreateSkillInput) => {
   return skill;
 };
 
-export const updateSkill = async (id: number, input: Partial<CreateSkillInput>) => {
+export const updateSkill = async (
+  id: number,
+  input: Partial<CreateSkillInput>
+) => {
   const [skill] = await db
     .update(skills)
     .set(input)
@@ -61,7 +64,10 @@ export const updateSkill = async (id: number, input: Partial<CreateSkillInput>) 
 };
 
 export const deleteSkill = async (id: number) => {
-  const [deleted] = await db.delete(skills).where(eq(skills.id, id)).returning();
+  const [deleted] = await db
+    .delete(skills)
+    .where(eq(skills.id, id))
+    .returning();
   return deleted;
 };
 
@@ -146,7 +152,9 @@ export const updateExperience = async (
 
     if (input.descriptions) {
       // Delete existing descriptions
-      await tx.delete(experienceDescriptions).where(eq(experienceDescriptions.experienceId, id));
+      await tx
+        .delete(experienceDescriptions)
+        .where(eq(experienceDescriptions.experienceId, id));
       // Add new descriptions
       if (input.descriptions.length > 0) {
         await tx.insert(experienceDescriptions).values(
@@ -164,7 +172,10 @@ export const updateExperience = async (
 };
 
 export const deleteExperience = async (id: number) => {
-  const [deleted] = await db.delete(experiences).where(eq(experiences.id, id)).returning();
+  const [deleted] = await db
+    .delete(experiences)
+    .where(eq(experiences.id, id))
+    .returning();
   return deleted;
 };
 
@@ -178,7 +189,9 @@ export const createCertificationSchema = z.object({
   order: z.number().optional(),
 });
 
-export type CreateCertificationInput = z.infer<typeof createCertificationSchema>;
+export type CreateCertificationInput = z.infer<
+  typeof createCertificationSchema
+>;
 
 export const getCertifications = async () => {
   return await db.query.certifications.findMany({

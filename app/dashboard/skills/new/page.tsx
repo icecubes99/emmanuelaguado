@@ -85,7 +85,9 @@ export default function NewSkillPage() {
         </Link>
         <div>
           <h1 className="text-3xl font-bold">New Skill</h1>
-          <p className="text-muted-foreground">Add a new skill to your portfolio</p>
+          <p className="text-muted-foreground">
+            Add a new skill to your portfolio
+          </p>
         </div>
       </div>
 
@@ -102,7 +104,9 @@ export default function NewSkillPage() {
               <Label htmlFor="name">Name *</Label>
               <Input id="name" {...register("name")} placeholder="React" />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -114,10 +118,13 @@ export default function NewSkillPage() {
                 placeholder="FaReact, SiTypescript, etc."
               />
               <p className="text-xs text-muted-foreground">
-                Use icon names from react-icons (e.g., FaReact, SiNextdotjs, FaNodeJs)
+                Use icon names from react-icons (e.g., FaReact, SiNextdotjs,
+                FaNodeJs)
               </p>
               {errors.iconName && (
-                <p className="text-sm text-destructive">{errors.iconName.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.iconName.message}
+                </p>
               )}
             </div>
 
@@ -138,7 +145,9 @@ export default function NewSkillPage() {
                   />
                 </div>
                 {errors.color && (
-                  <p className="text-sm text-destructive">{errors.color.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.color.message}
+                  </p>
                 )}
               </div>
 

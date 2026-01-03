@@ -122,7 +122,9 @@ export function EditCertificationForm({
               <Label htmlFor="name">Certification Name *</Label>
               <Input id="name" {...register("name")} />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -130,7 +132,9 @@ export function EditCertificationForm({
               <Label htmlFor="issuer">Issuing Organization *</Label>
               <Input id="issuer" {...register("issuer")} />
               {errors.issuer && (
-                <p className="text-sm text-destructive">{errors.issuer.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.issuer.message}
+                </p>
               )}
             </div>
 
@@ -139,7 +143,9 @@ export function EditCertificationForm({
                 <Label htmlFor="year">Year *</Label>
                 <Input id="year" {...register("year")} />
                 {errors.year && (
-                  <p className="text-sm text-destructive">{errors.year.message}</p>
+                  <p className="text-sm text-destructive">
+                    {errors.year.message}
+                  </p>
                 )}
               </div>
 
@@ -153,7 +159,9 @@ export function EditCertificationForm({
               <Label htmlFor="link">Credential Link *</Label>
               <Input id="link" {...register("link")} />
               {errors.link && (
-                <p className="text-sm text-destructive">{errors.link.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.link.message}
+                </p>
               )}
             </div>
           </CardContent>
