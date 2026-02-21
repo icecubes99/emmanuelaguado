@@ -48,11 +48,10 @@ const ProjectsProjectsSection = () => {
                   {project.year}
                 </h2>
               </div>
-              <div className="flex justify-center items-center w-fit">
+              <div className="w-full mb-8">
                 <ProjectsProjectsCard
                   title={project.title}
                   images={project.images}
-                  className="w-3/4"
                 />
               </div>
               <section className="grid md:grid-cols-2 gap-8 items-start p-4">
