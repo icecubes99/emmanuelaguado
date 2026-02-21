@@ -1,16 +1,16 @@
-import React from 'react'
-import { Button } from './ui/button'
-import { Mail } from 'lucide-react'
-import UniversalLayout from './margin'
-import Link from 'next/link'
+import React from "react"
+import { Button } from "./ui/button"
+import { Mail } from "lucide-react"
+import UniversalLayout from "./margin"
+import Link from "next/link"
 
 const HeroCallToActionSection = () => {
     return (
-        <section className="py-20 bg-muted/30">
+        <section className="bg-muted/30 py-20">
             <UniversalLayout>
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-6">Let&apos;s Work Together</h2>
-                    <p className="text-lg text-muted-foreground mb-8">
+                <div className="mx-auto max-w-3xl text-center">
+                    <h2 className="mb-6 text-3xl font-bold">Let&apos;s Work Together</h2>
+                    <p className="mb-8 text-lg text-muted-foreground">
                         I&apos;m always interested in hearing about new projects and opportunities.
                     </p>
                     <Link href="/contact">

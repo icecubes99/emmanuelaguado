@@ -1,57 +1,50 @@
-import React from 'react'
-import { Card, CardContent } from './ui/card'
-import { Mail, MapPin, Phone } from 'lucide-react'
-import { ContactInfo } from '@/lib/enums'
-import ContactFormComponent from './contact-form-component'
+import React from "react"
+import { Card, CardContent } from "./ui/card"
+import { Mail, MapPin, Phone } from "lucide-react"
+import { ContactInfo } from "@/lib/enums"
+import ContactFormComponent from "./contact-form-component"
 
 const ContactFormSection = () => {
     return (
         <div>
-            <div className="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto mb-16">
+            <div className="mx-auto mb-16 grid max-w-4xl gap-8 md:grid-cols-3">
                 <Card>
                     <CardContent className="pt-6">
                         <div className="text-center">
-                            <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                                <Mail className="w-6 h-6 text-primary" />
+                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                                <Mail className="h-6 w-6 text-primary" />
                             </div>
-                            <h3 className="font-medium mb-1">Email</h3>
-                            <p className="text-sm text-muted-foreground">
-                                {ContactInfo.Email}
-                            </p>
+                            <h3 className="mb-1 font-medium">Email</h3>
+                            <p className="text-sm text-muted-foreground">{ContactInfo.Email}</p>
                         </div>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardContent className="pt-6">
                         <div className="text-center">
-                            <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                                <Phone className="w-6 h-6 text-primary" />
+                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                                <Phone className="h-6 w-6 text-primary" />
                             </div>
-                            <h3 className="font-medium mb-1">Phone</h3>
-                            <p className="text-sm text-muted-foreground">
-                                {ContactInfo.Phone}
-                            </p>
+                            <h3 className="mb-1 font-medium">Phone</h3>
+                            <p className="text-sm text-muted-foreground">{ContactInfo.Phone}</p>
                         </div>
                     </CardContent>
                 </Card>
                 <Card>
                     <CardContent className="pt-6">
                         <div className="text-center">
-                            <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                                <MapPin className="w-6 h-6 text-primary" />
+                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                                <MapPin className="h-6 w-6 text-primary" />
                             </div>
-                            <h3 className="font-medium mb-1">Location</h3>
-                            <p className="text-sm text-muted-foreground">
-                                {ContactInfo.Location}
-                            </p>
+                            <h3 className="mb-1 font-medium">Location</h3>
+                            <p className="text-sm text-muted-foreground">{ContactInfo.Location}</p>
                         </div>
                     </CardContent>
                 </Card>
             </div>
-            <div className='mb-12'>
+            <div className="mb-12">
                 <ContactFormComponent />
             </div>
-
         </div>
     )
 }

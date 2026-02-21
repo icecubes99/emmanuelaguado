@@ -1,15 +1,15 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { Send } from 'lucide-react'
-import { submitContactForm } from '@/app/actions/submit-contact-form'
-import { useToast } from '@/hooks/use-toast'
-import CardTopBorder from './ui/card-with-top-border'
+import { Send } from "lucide-react"
+import { submitContactForm } from "@/app/actions/submit-contact-form"
+import { useToast } from "@/hooks/use-toast"
+import CardTopBorder from "./ui/card-with-top-border"
 
 export default function ContactFormComponent() {
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -17,15 +17,15 @@ export default function ContactFormComponent() {
     const { toast } = useToast()
 
     useEffect(() => {
-        const submitted = localStorage.getItem('formSubmitted')
-        if (submitted === 'true') {
+        const submitted = localStorage.getItem("formSubmitted")
+        if (submitted === "true") {
             setIsSubmitSuccessful(true)
         }
     }, [])
 
     const handleInputChange = () => {
         setIsSubmitSuccessful(false)
-        localStorage.removeItem('formSubmitted')
+        localStorage.removeItem("formSubmitted")
     }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -41,7 +41,7 @@ export default function ContactFormComponent() {
 
         if (result.success) {
             setIsSubmitSuccessful(true)
-            localStorage.setItem('formSubmitted', 'true')
+            localStorage.setItem("formSubmitted", "true")
             toast({
                 title: "Message Sent",
                 description: result.message,
@@ -57,7 +57,7 @@ export default function ContactFormComponent() {
     }
 
     return (
-        <div className="max-w-2xl mx-auto px-4">
+        <div className="mx-auto max-w-2xl px-4">
             <CardTopBorder>
                 <CardHeader>
                     <CardTitle>Send me a message</CardTitle>
@@ -126,8 +126,12 @@ export default function ContactFormComponent() {
                             className="w-full"
                             disabled={isSubmitting || isSubmitSuccessful}
                         >
-                            <Send className="w-4 h-4 mr-2" />
-                            {isSubmitting ? 'Sending...' : isSubmitSuccessful ? 'Message Sent' : 'Send Message'}
+                            <Send className="mr-2 h-4 w-4" />
+                            {isSubmitting
+                                ? "Sending..."
+                                : isSubmitSuccessful
+                                  ? "Message Sent"
+                                  : "Send Message"}
                         </Button>
                     </form>
                 </CardContent>
@@ -135,4 +139,3 @@ export default function ContactFormComponent() {
         </div>
     )
 }
-

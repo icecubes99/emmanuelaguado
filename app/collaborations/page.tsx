@@ -1,10 +1,10 @@
-import CollabCard from '@/components/collaboration-card'
-import CollabHeroSection from '@/components/collaboration-hero-section'
-import Footer from '@/components/footer'
-import HeroCallToActionSection from '@/components/hero-call-to-action-section'
-import UniversalLayout from '@/components/margin'
-import NavBar from '@/components/navbar'
-import React from 'react'
+import CollabCard from "@/components/collaboration-card"
+import CollabHeroSection from "@/components/collaboration-hero-section"
+import Footer from "@/components/footer"
+import HeroCallToActionSection from "@/components/hero-call-to-action-section"
+import UniversalLayout from "@/components/margin"
+import NavBar from "@/components/navbar"
+import React from "react"
 
 interface CollabData {
     page: number
@@ -28,13 +28,13 @@ export interface CollabUser {
 
 async function fetchUsers(): Promise<CollabData | null> {
     try {
-        const response = await fetch('https://reqres.in/api/users?page=2')
+        const response = await fetch("https://reqres.in/api/users?page=2")
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)
         }
         return response.json()
     } catch (error) {
-        console.error('Error fetching users:', error)
+        console.error("Error fetching users:", error)
         return null
     }
 }

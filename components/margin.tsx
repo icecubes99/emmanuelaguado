@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
+import { cn } from "@/lib/utils"
+import React from "react"
 
 interface props {
     children: React.ReactNode
@@ -7,11 +7,7 @@ interface props {
 }
 
 const UniversalLayout = ({ children, className }: props) => {
-    return (
-        <div className={cn('mx-12', className)}>
-            {children}
-        </div>
-    )
+    return <div className={cn("mx-12", className)}>{children}</div>
 }
 
 export default UniversalLayout

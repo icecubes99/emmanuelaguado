@@ -1,17 +1,24 @@
-import React from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselDots } from './ui/carousel'
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import React from "react"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    CarouselDots,
+} from "./ui/carousel"
+import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 interface ProjectProjectsProps {
-    title: string;
-    images?: string[];
+    title: string
+    images?: string[]
     className?: string
 }
 
 const ProjectsProjectsCard = ({ title, images = [], className }: ProjectProjectsProps) => {
     return (
-        <Carousel 
+        <Carousel
             className={cn("w-full", className)}
             opts={{
                 align: "start",
@@ -22,15 +29,15 @@ const ProjectsProjectsCard = ({ title, images = [], className }: ProjectProjects
                 {images.length > 0 ? (
                     images.map((image, index) => (
                         <CarouselItem key={index} className="pl-2 md:pl-4">
-                            <div className="relative group">
-                                <div className="relative w-full overflow-hidden rounded-xl bg-muted shadow-2xl border border-border/50 transition-all duration-500 group-hover:shadow-3xl group-hover:border-border">
+                            <div className="group relative">
+                                <div className="group-hover:shadow-3xl relative w-full overflow-hidden rounded-xl border border-border/50 bg-muted shadow-2xl transition-all duration-500 group-hover:border-border">
                                     <Image
                                         src={image}
                                         alt={`${title} - image ${index + 1}`}
                                         width={1920}
                                         height={1080}
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                        className="w-full h-auto object-contain"
+                                        className="h-auto w-full object-contain"
                                         priority={index === 0}
                                         loading={index === 0 ? "eager" : "lazy"}
                                         quality={90}
@@ -41,10 +48,10 @@ const ProjectsProjectsCard = ({ title, images = [], className }: ProjectProjects
                     ))
                 ) : (
                     <CarouselItem>
-                        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-muted/50 border border-dashed border-border flex items-center justify-center">
-                            <div className="text-center p-8">
+                        <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl border border-dashed border-border bg-muted/50">
+                            <div className="p-8 text-center">
                                 <svg
-                                    className="mx-auto h-12 w-12 text-muted-foreground/50 mb-4"
+                                    className="mx-auto mb-4 h-12 w-12 text-muted-foreground/50"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
