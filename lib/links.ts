@@ -30,6 +30,7 @@ export enum ProjectURLs {
     KIIWebsiteBehance = "https://www.behance.net/gallery/215006743/Kupler-Landing-Page",
     BlockDiaryFigma = "https://www.figma.com/proto/4GeasETcLd8s7pIyNNZAyj/Where-is-it--%7C-Minecraft-UXUI-comp?page-id=8%3A1597&node-id=8-1610&p=f&viewport=-1366%2C-1470%2C0.34&t=uXzS2XegPPjEmGX7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=8%3A1610",
     SubVizSite = "https://subviz.vercel.app",
+    SamahanWebsite = "https://samahan.addu.edu.ph/",
 }
 
 export enum CredentialURLs {

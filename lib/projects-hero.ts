@@ -15,6 +15,15 @@ interface Project {
 
 export const projectsData: Project[] = [
     {
+        title: "SAMAHAN On The Move Official Website",
+        description:
+            "Get to know more about SAMAHAN On The Move, its officers, departments, and independent bodies",
+        image: "/SamahanWebsite/1st.jpg",
+        alt: "SAMAHAN On The Move Official Website",
+        liveLink: ProjectURLs.SamahanWebsite,
+        badges: ["NextJS", "School", "Education", "Frontend", "Vercel", "Design"],
+    },
+    {
         title: "SubViz - Subscription Visualizer",
         description: "A Visualizer for your Monthly/Yearly Subscriptions",
         image: "/SubViz/1.png",
@@ -40,13 +49,4 @@ export const projectsData: Project[] = [
         liveLink: ProjectURLs.EMSLiveLink,
         badges: ["Next.js 14", "TypeScript", "Supabase", "TailwindCSS", "Prisma", "PostgreSQL"],
     },
-
-    // {
-    //     title: "PHABS Davao",
-    //     description: "Mobile app for tracking PHABS Buses in Davao City.",
-    //     image: "/PHABS.png",
-    //     githubLink: "https://github.com/username/ai-image-gen",
-    //     liveLink: "https://ai-image-gen.vercel.app",
-    //     badges: ["React", "Node.js", "DALL-E", "Express", "MongoDB", "Cloudinary"]
-    // },
 ]

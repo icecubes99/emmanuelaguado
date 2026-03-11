@@ -32,6 +32,39 @@ interface Project {
 
 export const projectsData: Project[] = [
     {
+        title: "SAMAHAN On The Move Official Website",
+        description:
+            "Get to know more about SAMAHAN On The Move, its officers, departments, and independent bodies",
+        image: "/SamahanWebsite/1st.jpg",
+        alt: "SAMAHAN On The Move Official Website",
+        liveLink: ProjectURLs.SamahanWebsite,
+        badges: ["NextJS", "School", "Education", "Frontend", "Vercel", "Design"],
+        images: [
+            "/SamahanWebsite/1st.jpg",
+            "/SamahanWebsite/2nd.jpg",
+            "/SamahanWebsite/3rd.jpg",
+            "/SamahanWebsite/4th.jpg",
+        ],
+        year: "2025",
+        features: [
+            {
+                icon: "globe",
+                title: "Official Website",
+                description: "Live platform representing SAMAHAN On The Move and its mission",
+            },
+            {
+                icon: "users",
+                title: "Officers & Departments",
+                description: "Showcases officers, departments, and independent bodies",
+            },
+            {
+                icon: "modern",
+                title: "Modern Design",
+                description: "Clean and professional design built with Next.js and Vercel",
+            },
+        ],
+    },
+    {
         title: "SubViz - Subscription Visualizer",
         description: "A Visualizer for your Monthly/Yearly Subscriptions",
         image: "/SubViz/1.png",
