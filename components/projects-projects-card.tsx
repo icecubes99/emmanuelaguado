@@ -30,14 +30,14 @@ const ProjectsProjectsCard = ({ title, images = [], className }: ProjectProjects
                     images.map((image, index) => (
                         <CarouselItem key={index} className="pl-2 md:pl-4">
                             <div className="group relative">
-                                <div className="group-hover:shadow-3xl relative w-full overflow-hidden rounded-xl border border-border/50 bg-muted shadow-2xl transition-all duration-500 group-hover:border-border">
+                                <div className="group-hover:shadow-3xl relative flex max-h-[75vh] w-full items-center justify-center overflow-hidden rounded-xl border border-border/50 bg-muted shadow-2xl transition-all duration-500 group-hover:border-border">
                                     <Image
                                         src={image}
                                         alt={`${title} - image ${index + 1}`}
                                         width={1920}
                                         height={1080}
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                        className="h-auto w-full object-contain"
+                                        className="max-h-[75vh] w-auto max-w-full object-contain"
                                         priority={index === 0}
                                         loading={index === 0 ? "eager" : "lazy"}
                                         quality={90}
