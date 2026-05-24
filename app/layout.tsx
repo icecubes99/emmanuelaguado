@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         siteName: "Emmanuel Aguado",
         images: [
             {
-                url: "/Me.JPG", // Using the picture found in your public folder
+                url: "/metadata.png",
                 width: 1200,
                 height: 630,
                 alt: "Emmanuel Aguado Photo",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Emmanuel Aguado",
         description: "Emmanuel Aguado's personal website/portfolio.",
-        images: ["/Me.JPG"],
+        images: ["/metadata.png"],
     },
 }
 
