@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         template: "%s | Emmanuel Aguado",
     },
     description:
-        "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer specializing in building exceptional digital experiences.",
+        "Portfolio and personal website of Emmanuel Aguado, a versatile Software Developer currently open for work and eager to contribute to new projects and opportunities.",
     keywords: [
         "Emmanuel Aguado",
         "Software Developer",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Emmanuel Aguado | Software Developer",
         description:
-            "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
+            "Portfolio and personal website of Emmanuel Aguado, a versatile Software Developer currently open for work on new projects.",
         url: "/",
         siteName: "Emmanuel Aguado",
         images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Emmanuel Aguado | Software Developer",
         description:
-            "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
+            "Portfolio and personal website of Emmanuel Aguado, a versatile Software Developer currently open for work on new projects.",
         creator: "@yourtwitterhandle", // User can update this later
         images: ["/metadata.png"],
     },
