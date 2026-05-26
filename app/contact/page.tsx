@@ -8,7 +8,8 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Contact",
-    description: "Get in touch with Emmanuel Aguado. Send a message, inquiry, or connect for potential collaborations.",
+    description:
+        "Get in touch with Emmanuel Aguado. Send a message, inquiry, or connect for potential collaborations.",
     alternates: {
         canonical: "/contact",
     },

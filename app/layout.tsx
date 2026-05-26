@@ -18,8 +18,16 @@ export const metadata: Metadata = {
         default: "Emmanuel Aguado | Software Developer",
         template: "%s | Emmanuel Aguado",
     },
-    description: "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer specializing in building exceptional digital experiences.",
-    keywords: ["Emmanuel Aguado", "Software Developer", "Web Developer", "Programmer", "Portfolio", "Engineer"],
+    description:
+        "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer specializing in building exceptional digital experiences.",
+    keywords: [
+        "Emmanuel Aguado",
+        "Software Developer",
+        "Web Developer",
+        "Programmer",
+        "Portfolio",
+        "Engineer",
+    ],
     authors: [{ name: "Emmanuel Aguado", url: "https://emmanuelaguado.dev" }],
     creator: "Emmanuel Aguado",
     icons: {
@@ -31,7 +39,8 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Emmanuel Aguado | Software Developer",
-        description: "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
+        description:
+            "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
         url: "/",
         siteName: "Emmanuel Aguado",
         images: [
@@ -48,7 +57,8 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Emmanuel Aguado | Software Developer",
-        description: "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
+        description:
+            "Portfolio and personal website of Emmanuel Aguado, a passionate Software Developer.",
         creator: "@yourtwitterhandle", // User can update this later
         images: ["/metadata.png"],
     },

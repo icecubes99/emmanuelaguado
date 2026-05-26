@@ -9,7 +9,8 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Projects",
-    description: "Explore the different software and web development projects Emmanuel Aguado has built and contributed to.",
+    description:
+        "Explore the different software and web development projects Emmanuel Aguado has built and contributed to.",
     alternates: {
         canonical: "/projects",
     },
