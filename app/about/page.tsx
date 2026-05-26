@@ -5,6 +5,15 @@ import HeroCallToActionSection from "@/components/hero-call-to-action-section"
 import UniversalLayout from "@/components/margin"
 import NavBar from "@/components/navbar"
 import React from "react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "Learn more about Emmanuel Aguado, his background, experience, and what drives his passion for software development.",
+    alternates: {
+        canonical: "/about",
+    },
+}
 
 const page = () => {
     return (

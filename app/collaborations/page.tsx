@@ -5,6 +5,15 @@ import HeroCallToActionSection from "@/components/hero-call-to-action-section"
 import UniversalLayout from "@/components/margin"
 import NavBar from "@/components/navbar"
 import React from "react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Collaborations",
+    description: "Check out the individuals, teams, and organizations Emmanuel Aguado has collaborated with.",
+    alternates: {
+        canonical: "/collaborations",
+    },
+}
 
 interface CollabData {
     page: number
